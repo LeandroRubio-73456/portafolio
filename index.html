@@ -4,14 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Leandro Rubio — Desarrollador Backend</title>
+    <!-- SEO -->
+    <meta name="description"
+        content="Portafolio de Leandro Rubio, desarrollador backend enfocado en PHP y Laravel. Proyectos reales, código en GitHub.">
+    <meta name="theme-color" content="#0D1117">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Leandro Rubio — Desarrollador Backend">
+    <meta property="og:description"
+        content="Portafolio con proyectos reales en Laravel y PHP: sistema de gestión veterinaria y plataforma de e-commerce.">
+    <meta property="og:image" content="https://_/assets/og-image.png">
+    <meta property="og:url" content="https://_">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leandro Rubio — Desarrollador Backend">
+    <meta name="twitter:description" content="Portafolio con proyectos reales en Laravel y PHP.">
+    <meta name="twitter:image" content="https://TU-DOMINIO/assets/og-image.png">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-900 font-mono text-white max-w-5xl text-lg mx-auto my-8 px-4">
-
-    <header class="flex justify-between pb-10">
+    <header class="flex flex-wrap justify-between gap-4 pb-10">
         <p class="font-bold">leandro<span class="text-amber-400">@</span>portfolio</p>
         <nav class="flex gap-6 text-gray-400">
             <a href="#proyectos" class="hover:text-white hover:underline">proyectos</a>
@@ -25,11 +46,11 @@
         <section id="hero" class="flex flex-col gap-6 pb-10">
             <div class="flex flex-col gap-4 mb-6">
                 <span class="text-gray-400">$ cat presentacion.txt</span>
-                <h1 class="text-5xl">Hola, soy <span class="text-amber-400">Leandro Rubio</span></h1>
+                <h1 class="text-3xl sm:text-5xl">Hola, soy <span class="text-amber-400">Leandro Rubio</span></h1>
                 <p class="block text-gray-400">Desarrollador backend enfocado en PHP y Laravel. <br>
                     Construyo sistemas web reales, de principio a fin.</p>
             </div>
-            <div class="flex gap-6 mb-6">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6">
                 <a href="#proyectos"
                     class="text-amber-400 border border-amber-400 rounded px-4 py-2 hover:text-amber-300 hover:border-amber-300 transition-colors">$
                     ver_proyectos --run</a>
@@ -48,28 +69,28 @@
 
             <ul class="flex flex-col gap-6">
                 <li class="p-6 border border-gray-600 rounded hover:border-gray-400 transition-colors">
-                    <div class="flex justify-between mb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
                         <h3>01_elicrochet-ecommerce<span class="text-amber-400">/</span></h3>
                     </div>
-                    <p class="text-gray-400 mb-4">Plataforma de e-commerce para una microempresa de artesanías, con CI,
-                        tests
-                        automatizados y despliegue en producción.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-400"># Laravel 12 · MySQL · Bootstrap · PHPUnit</span>
-                        <a href="https://elicrochet.shop" target="_blank" rel="noopener noreferrer"
+                    <p class="text-gray-400 mb-4">Plataforma de e-commerce para una microempresa de artesanías, con CI y
+                        tests automatizados.</p>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+                        <span class="text-gray-400"># Laravel · MySQL · Bootstrap · PHPUnit</span>
+                        <a href="https://github.com/LeandroRubio-73456/elicrochet-ecommerce" target="_blank"
+                            rel="noopener noreferrer"
                             class="text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
-                            npm run demo</a>
+                            git clone --</a>
                     </div>
                 </li>
 
                 <li class="p-6 border border-gray-600 rounded hover:border-gray-400 transition-colors">
-                    <div class="flex justify-between mb-4">
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
                         <h3>02_sistema-veterinario<span class="text-amber-400">/</span></h3>
                         <span class="text-gray-400">proyecto de titulación</span>
                     </div>
                     <p class="text-gray-400 mb-4">Gestión de cirugías, quirófanos y roles (admin / staff / veterinario)
                         con portal de consulta para propietarios.</p>
-                    <div class="flex justify-between items-center">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                         <span class="text-gray-400"># Laravel · MySQL · Blade · Alpine.js · Tailwind</span>
                         <a href="https://github.com/LeandroRubio-73456/clinica-veterinaria" target="_blank"
                             rel="noopener noreferrer"
@@ -126,21 +147,22 @@
                 Respondo rápido.</p>
             <dl class="flex flex-col gap-4">
                 <div
-                    class="flex justify-between p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
+                    class="flex flex-col sm:flex-row sm:justify-between gap-1 p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
                     <dt>--email</dt>
-                    <dd class="text-amber-400"><a href="mailto:leandrorubio456@gmail.com">leandrorubio456@gmail.com</a>
+                    <dd class="text-amber-400 break-all"><a
+                            href="mailto:leandrorubio456@gmail.com">leandrorubio456@gmail.com</a>
                     </dd>
                 </div>
                 <div
-                    class="flex justify-between p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
+                    class="flex flex-col sm:flex-row sm:justify-between gap-1 p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
                     <dt>--github</dt>
-                    <dd class="text-amber-400"><a href="https://github.com/LeandroRubio-73456" target="_blank"
+                    <dd class="text-amber-400 break-all"><a href="https://github.com/LeandroRubio-73456" target="_blank"
                             rel="noopener noreferrer">github.com/LeandroRubio-73456</a></dd>
                 </div>
                 <div
-                    class="flex justify-between p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
+                    class="flex flex-col sm:flex-row sm:justify-between gap-1 p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
                     <dt>--linkedin</dt>
-                    <dd class="text-amber-400"><a href="https://www.linkedin.com/in/leandro-rubio-369651367/"
+                    <dd class="text-amber-400 break-all"><a href="https://www.linkedin.com/in/leandro-rubio-369651367/"
                             target="_blank" rel="noopener noreferrer">linkedin.com/in/leandro-rubio</a></dd>
                 </div>
             </dl>
@@ -148,10 +170,13 @@
                 class="block w-full text-amber-400 p-4 text-center border border-amber-400 rounded hover:border-amber-300 hover:text-amber-300 transition-colors">$
                 send --message "Hola Leandro, ..."</a>
         </section>
-        <footer>
-            <p class="text-gray-400 text-center">© 2026 leandro_rubio · built with html &amp; tailwind<span
-                    class="text-amber-400">_</span></p>
-        </footer>
+        <hr class="border-gray-600 mb-4">
+    </main>
+
+    <footer>
+        <p class="text-gray-400 text-center">© 2026 leandro_rubio · built with html &amp; tailwind<span
+                class="text-amber-400">_</span></p>
+    </footer>
 </body>
 
 </html>
