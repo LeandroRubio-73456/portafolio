@@ -6,7 +6,7 @@ Sitio personal para mostrar mis proyectos como desarrollador backend.
 Portafolio personal, construido para centralizar mis proyectos y mi CV en un solo lugar.
 
 ## Demo
-...
+[...](https://leandrorubio-73456.github.io/portafolio/)
 
 ## Stack Tecnológico
 - HTML5 semántico
