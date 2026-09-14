@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
