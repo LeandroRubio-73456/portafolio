@@ -4,7 +4,8 @@
   "description": "Sitio personal para mostrar mis proyectos como desarrollador backend.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,5 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
-  },
-  "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/style.css --minify"
+  }
 }
