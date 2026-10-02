@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Leandro Rubio — Desarrollador Backend">
     <meta property="og:description"
-        content="Portafolio con proyectos reales en Laravel y PHP: sistema de gestión veterinaria y plataforma de e-commerce.">
+        content="Portafolio con proyectos reales en Laravel y PHP: e-commerce con pagos en línea, sistema de gestión veterinaria y una landing para un servicio técnico.">
     <meta property="og:image" content="https://leandrorubio-73456.github.io/portafolio/assets/og-image.png">
     <meta property="og:url" content="https://leandrorubio-73456.github.io/portafolio/">
 
@@ -37,6 +37,7 @@
         <nav class="flex gap-6 text-gray-400">
             <a href="#proyectos" class="hover:text-white hover:underline">proyectos</a>
             <a href="#sobre-mi" class="hover:text-white hover:underline">sobre-mi</a>
+            <a href="#experiencia" class="hover:text-white hover:underline">experiencia</a>
             <a href="#contacto" class="hover:text-white hover:underline">contacto</a>
         </nav>
     </header>
@@ -47,8 +48,9 @@
             <div class="flex flex-col gap-4 mb-6">
                 <span class="text-gray-400">$ cat presentacion.txt</span>
                 <h1 class="text-3xl sm:text-5xl">Hola, soy <span class="text-amber-400">Leandro Rubio</span></h1>
-                <p class="block text-gray-400">Desarrollador backend enfocado en PHP y Laravel. <br>
-                    Construyo sistemas web reales, de principio a fin.</p>
+                <p class="block font-sans text-gray-400">Desarrollador backend (PHP · Laravel). <br>
+                    Antes de programar pasé 3 años en soporte técnico, así que construyo sistemas pensando en quien
+                    los usa.</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6">
                 <a href="#proyectos"
@@ -59,76 +61,103 @@
                     curriculum.pdf</a>
             </div>
             <hr class="border-gray-600 mb-6">
-            <code class="block text-amber-400">> <span class="text-gray-400">stack: PHP · Laravel · MySQL · Tailwind · Git</span>_
+            <code class="block text-amber-400">> <span class="text-gray-400">stack: PHP · Laravel · MySQL · Pest · Docker · Git</span><span class="motion-safe:animate-blink">_</span>
             </code>
         </section>
 
         <!--PROJECTS SECTION-->
+        <!-- Cada tarjeta es clicable: el enlace del título se estira sobre toda la tarjeta (after:inset-0)
+             y los botones quedan por encima con relative z-10. -->
         <section id="proyectos" class="flex flex-col gap-6 pb-10">
             <h2 class="text-gray-400">$ ls -la proyectos/</h2>
 
             <ul class="flex flex-col gap-6">
-                <li class="p-6 border border-gray-600 rounded hover:border-gray-400 transition-colors">
+                <li
+                    class="relative p-6 border border-gray-600 rounded hover:border-gray-400 focus-within:border-gray-400 transition-colors">
                     <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
-                        <h3>01_elicrochet-ecommerce<span class="text-amber-400">/</span></h3>
+                        <h3><a href="proyectos/elicrochet.html"
+                                class="after:absolute after:inset-0 hover:underline">01_elicrochet-ecommerce<span
+                                    class="text-amber-400">/</span></a></h3>
+                        <span class="text-gray-400">demo en vivo · cobertura 81%</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Plataforma de e-commerce para una microempresa de artesanías, con CI y
-                        tests automatizados.</p>
+                    <p class="font-sans text-gray-400 mb-4">Tienda en línea para una microempresa de artesanías: carrito,
+                        pagos con PayPhone, pedidos personalizados con cotización y reseñas solo de compradores
+                        verificados. Cada pago se procesa en una transacción atómica para que ninguna orden quede a
+                        medias.</p>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-                        <span class="text-gray-400"># Laravel · MySQL · Bootstrap · PHPUnit</span>
-                        <a href="https://github.com/LeandroRubio-73456/elicrochet-ecommerce" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
-                            git clone --</a>
+                        <span class="text-gray-400"># Laravel · MySQL · Bootstrap · Pest · GitHub Actions</span>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="https://elicrochet-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_demo ↗</a>
+                            <a href="https://github.com/LeandroRubio-73456/elicrochet-ecommerce" target="_blank" rel="noopener noreferrer"
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_codigo ↗</a>
+                        </div>
                     </div>
                 </li>
 
-                <li class="p-6 border border-gray-600 rounded hover:border-gray-400 transition-colors">
+                <li
+                    class="relative p-6 border border-gray-600 rounded hover:border-gray-400 focus-within:border-gray-400 transition-colors">
                     <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
-                        <h3>02_sistema-veterinario<span class="text-amber-400">/</span></h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Gestión de cirugías, quirófanos y roles (admin / staff / veterinario)
-                        con portal de consulta para propietarios.</p>
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
-                        <span class="text-gray-400"># Laravel · MySQL · Blade · Alpine.js · Tailwind</span>
-                        <a href="https://github.com/LeandroRubio-73456/clinica-veterinaria" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
-                            git clone --</a>
-                    </div>
-                </li>
-                <li class="p-6 border border-gray-600 rounded hover:border-gray-400 transition-colors">
-                    <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
-                        <h3>03_tecnosoluciones<span class="text-amber-400">/</span></h3>
+                        <h3><a href="proyectos/clinica-veterinaria.html"
+                                class="after:absolute after:inset-0 hover:underline">02_sistema-veterinario<span
+                                    class="text-amber-400">/</span></a></h3>
                         <span class="text-gray-400">demo en vivo</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Landing page para un servicio técnico en Quito, con una orden de
-                        servicio interactiva que arma el pedido y lo envía por WhatsApp.</p>
+                    <p class="font-sans text-gray-400 mb-4">Agenda de cirugías que impide cruces de veterinario, quirófano
+                        y horario mediante transacciones con bloqueo. Incluye roles y permisos dinámicos, portal para
+                        propietarios, reportes exportables a CSV y PDF, y recordatorios automáticos por correo.</p>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+                        <span class="text-gray-400"># Laravel · MySQL · Alpine.js · Tailwind · Pest</span>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="https://clinica-veterinaria-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_demo ↗</a>
+                            <a href="https://github.com/LeandroRubio-73456/clinica-veterinaria" target="_blank" rel="noopener noreferrer"
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_codigo ↗</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li
+                    class="relative p-6 border border-gray-600 rounded hover:border-gray-400 focus-within:border-gray-400 transition-colors">
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-1 mb-4">
+                        <h3><a href="proyectos/tecnosoluciones.html"
+                                class="after:absolute after:inset-0 hover:underline">03_tecnosoluciones<span
+                                    class="text-amber-400">/</span></a></h3>
+                        <span class="text-gray-400">demo en vivo</span>
+                    </div>
+                    <p class="font-sans text-gray-400 mb-4">Landing page para un servicio técnico en Quito que solo atiende por
+                        WhatsApp. Una orden de servicio interactiva arma el pedido con los datos que el
+                        técnico necesita y abre WhatsApp con el mensaje listo.</p>
                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                         <span class="text-gray-400"># React · Vite · Tailwind</span>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="https://tecnosoluciones-5t8.pages.dev/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
-                                open --demo</a>
+                            <a href="https://tecnosoluciones-5t8.pages.dev/" target="_blank" rel="noopener noreferrer"
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_demo ↗</a>
                             <a href="https://github.com/LeandroRubio-73456/tecnosoluciones" target="_blank"
                                 rel="noopener noreferrer"
-                                class="text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
-                                git clone --</a>
+                                class="relative z-10 text-amber-400 border border-amber-400 rounded px-4 py-1 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                                ver_codigo ↗</a>
                         </div>
                     </div>
                 </li>
             </ul>
-            <span class="text-gray-400">3 directories, 0 pendientes<span class="text-amber-400">_</span></span>
+            <span class="text-gray-400">3 directories, 0 pendientes<span
+                    class="text-amber-400 motion-safe:animate-blink">_</span></span>
         </section>
 
         <!--ABOUT ME SECTION-->
         <section id="sobre-mi" class="flex flex-col gap-6 pb-10">
             <h2 class="text-gray-400">$ whoami --verbose</h2>
             <div class="flex flex-col md:flex-row gap-6 md:gap-0">
-                <div class="md:basis-3/5 md:border-e md:pe-6 border-gray-600">
-                    <p class="pb-4">Tecnólogo en Desarrollo de Software, con años de experiencia previa en soporte
-                        técnico y atención al cliente antes de dedicarme de lleno a programar.</p>
+                <div class="font-sans md:basis-3/5 md:border-e md:pe-6 border-gray-600">
+                    <p class="pb-4">Tecnólogo en Desarrollo de Software y bachiller técnico en informática. Antes de
+                        dedicarme de lleno a programar pasé más de 3 años del lado del usuario: soporte técnico, venta
+                        de equipos y atención al cliente.</p>
                     <p class="text-gray-400">
                         Eso me dejó algo que muchos devs junior no tienen todavía: entender de primera mano lo que un
                         usuario real necesita, no solo lo que el código permite.</p>
@@ -142,29 +171,71 @@
                         </div>
                         <div class="flex gap-2">
                             <dt class="text-amber-400">frontend:</dt>
-                            <dd>Tailwind, Alpine.js</dd>
+                            <dd>Blade, Tailwind, Alpine.js, React</dd>
+                        </div>
+                        <div class="flex gap-2">
+                            <dt class="text-amber-400">testing:</dt>
+                            <dd>Pest, PHPUnit, GitHub Actions</dd>
                         </div>
                         <div class="flex gap-2">
                             <dt class="text-amber-400">tools:</dt>
-                            <dd>Git, Docker</dd>
-                        </div>
-                        <div class="flex gap-2">
-                            <dt class="text-amber-400">soft_skills:</dt>
-                            <dd>soporte, trato con clientes</dd>
+                            <dd>Git, Docker, Laravel Sail</dd>
                         </div>
                     </dl>
                 </div>
             </div>
             <hr class="border-gray-600">
             <code
-                class="block text-amber-400">> <span class="text-gray-400">ubicación: Quito, Ecuador · disponible para nuevos proyectos</span>_</code>
+                class="block text-amber-400">> <span class="text-gray-400">ubicación: Quito, Ecuador · disponible para nuevos proyectos</span><span class="motion-safe:animate-blink">_</span></code>
+        </section>
+
+        <!--EXPERIENCE SECTION-->
+        <section id="experiencia" class="flex flex-col gap-6 pb-10">
+            <h2 class="text-gray-400">$ cat experiencia.log</h2>
+            <ol class="flex flex-col gap-4">
+                <li class="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                    <span class="text-amber-400 sm:basis-40 shrink-0">2025</span>
+                    <div>
+                        <h3>Pasante de TICs · Hospital General del Sur de Quito</h3>
+                        <p class="font-sans text-gray-400">Soporte técnico a equipos y redes internas, mantenimiento
+                            preventivo y correctivo, configuración de sistemas y documentación de incidencias.</p>
+                    </div>
+                </li>
+                <li class="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                    <span class="text-amber-400 sm:basis-40 shrink-0">2021 – 2024</span>
+                    <div>
+                        <h3>Ventas y soporte técnico · TecnoSoluciones</h3>
+                        <p class="font-sans text-gray-400">Venta de equipos y accesorios, diagnóstico, mantenimiento e
+                            instalación de software. Hoy construyo la presencia web del negocio.</p>
+                    </div>
+                </li>
+            </ol>
+            <a href="assets/curriculum.pdf" target="_blank" rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white hover:underline"># trayectoria completa en curriculum.pdf ↗</a>
+
+            <h2 class="text-gray-400 pt-4">$ cat formacion.log</h2>
+            <ol class="flex flex-col gap-4">
+                <li class="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                    <span class="text-amber-400 sm:basis-40 shrink-0">2023 – 2026</span>
+                    <div>
+                        <h3>Tecnología en Desarrollo de Software</h3>
+                        <p class="font-sans text-gray-400">Instituto Superior Universitario "Sucre" · Quito</p>
+                    </div>
+                </li>
+                <li class="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                    <span class="text-amber-400 sm:basis-40 shrink-0">2023</span>
+                    <div>
+                        <h3>Bachiller técnico, especialidad informática</h3>
+                        <p class="font-sans text-gray-400">Academia Aeronáutica "Mayor Pedro Traversari" · Quito</p>
+                    </div>
+                </li>
+            </ol>
         </section>
         <!--CONTACT SECTION-->
         <section id="contacto" class="flex flex-col gap-6 pb-10">
             <h2 class="text-gray-400">$ mail --compose --to=leandro</h2>
-            <h3 class="text-3xl">Hablemos de tu <span class="text-amber-400">proyecto</span></h3>
-            <p class="text-gray-400 max-w-xl">Disponible para prácticas, proyectos freelance o una oportunidad junior.
-                Respondo rápido.</p>
+            <h3 class="text-3xl">¿Trabajamos <span class="text-amber-400">juntos</span>?</h3>
+            <p class="font-sans text-gray-400 max-w-xl">Disponible para un empleo junior o proyectos freelance. Respondo rápido.</p>
             <dl class="flex flex-col gap-4">
                 <div
                     class="flex flex-col sm:flex-row sm:justify-between gap-1 p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
@@ -183,7 +254,7 @@
                     class="flex flex-col sm:flex-row sm:justify-between gap-1 p-4 border border-gray-600 rounded hover:border-gray-400 transition-colors">
                     <dt>--linkedin</dt>
                     <dd class="text-amber-400 break-all"><a href="https://www.linkedin.com/in/leandro-rubio-369651367/"
-                            target="_blank" rel="noopener noreferrer">linkedin.com/in/leandro-rubio</a></dd>
+                            target="_blank" rel="noopener noreferrer">linkedin.com/in/leandro-rubio-369651367</a></dd>
                 </div>
             </dl>
             <a href="mailto:leandrorubio456@gmail.com"
@@ -195,7 +266,7 @@
 
     <footer>
         <p class="text-gray-400 text-center">© 2026 leandro_rubio · built with html &amp; tailwind<span
-                class="text-amber-400">_</span></p>
+                class="text-amber-400 motion-safe:animate-blink">_</span></p>
     </footer>
 </body>
 

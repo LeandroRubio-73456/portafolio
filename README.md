@@ -34,7 +34,8 @@ Un perfil de GitHub muestra repositorios, pero no cuenta qué hace cada uno ni q
 
 ## Funciones principales
 
-- **Proyectos** con descripción, stack y enlace directo a cada repositorio.
+- **Proyectos** con descripción, stack y enlace directo a cada repositorio. Cada tarjeta es clicable y lleva a una página propia del proyecto.
+- **Página por proyecto** con contexto, capturas, funciones, decisiones técnicas y calidad (pruebas y CI).
 - **CV descargable** en PDF.
 - **Diseño responsive** (mobile-first) con estética de terminal, coherente con un perfil backend.
 - **SEO y vista previa al compartir:** meta tags, Open Graph e imagen propia para LinkedIn y redes.
@@ -75,11 +76,12 @@ npx serve .
 ## Estructura del proyecto
 
 ```
-├── index.html          # Todo el contenido del sitio
+├── index.html          # Página principal
+├── proyectos/          # Una página por proyecto
 ├── src/
 │   ├── input.css       # Entrada de Tailwind
 │   └── output.css      # CSS compilado (lo que carga index.html)
-├── assets/             # CV, imagen Open Graph y favicons
+├── assets/             # CV, imagen Open Graph, favicons y capturas de proyectos (assets/proyectos/)
 └── docs/screenshots/   # Capturas para este README
 ```
 
