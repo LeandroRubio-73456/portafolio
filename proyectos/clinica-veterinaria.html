@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth selection:text-gray-900 selection:bg-amber-400">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema veterinario — Leandro Rubio</title>
+    <meta name="description"
+        content="Sistema web en Laravel para programar cirugías veterinarias sin cruces de horario, con roles, portal de propietarios y reportes.">
+    <meta name="theme-color" content="#0D1117">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Sistema veterinario — Leandro Rubio">
+    <meta property="og:description"
+        content="Agenda de cirugías en Laravel que impide cruces de veterinario, quirófano y horario.">
+    <meta property="og:image"
+        content="https://leandrorubio-73456.github.io/portafolio/assets/proyectos/clinica-veterinaria/dashboard.png">
+    <meta property="og:url" content="https://leandrorubio-73456.github.io/portafolio/proyectos/clinica-veterinaria.html">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body class="bg-gray-900 font-mono text-white max-w-5xl text-lg mx-auto my-8 px-4">
+    <header class="flex flex-wrap justify-between gap-4 pb-10">
+        <a href="../index.html" class="font-bold">leandro<span class="text-amber-400">@</span>portfolio</a>
+        <nav class="flex gap-6 text-gray-400">
+            <a href="../index.html#proyectos" class="hover:text-white hover:underline">cd ../proyectos</a>
+        </nav>
+    </header>
+
+    <main class="flex flex-col gap-12 pb-10">
+        <section class="flex flex-col gap-6">
+            <span class="text-gray-400">$ cat proyectos/02_sistema-veterinario/README.md</span>
+            <h1 class="text-3xl sm:text-5xl">Sistema <span class="text-amber-400">veterinario</span></h1>
+            <p class="font-sans text-gray-400 max-w-3xl">Sistema web para organizar cirugías veterinarias, propietarios,
+                mascotas, veterinarios y quirófanos. Centraliza la agenda, evita cruces de horarios, da seguimiento al
+                estado de cada cirugía y muestra indicadores para tomar decisiones operativas.</p>
+            <span class="text-gray-400"># Laravel 13 · PHP 8.4 · MySQL · Blade · Tailwind · Alpine.js · FullCalendar ·
+                Pest · Docker</span>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://clinica-veterinaria-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                    class="text-amber-400 border border-amber-400 rounded px-4 py-2 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                    ver_demo ↗</a>
+                <a href="https://github.com/LeandroRubio-73456/clinica-veterinaria" target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 border border-gray-600 rounded px-4 py-2 hover:text-white hover:border-white transition-colors">$
+                    ver_codigo ↗</a>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## pruébalo</h2>
+            <p class="font-sans text-gray-300 max-w-3xl">Entra a la <a href="https://clinica-veterinaria-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                    class="text-amber-400 hover:underline">demo en vivo ↗</a> con cualquiera de estas cuentas. La
+                contraseña de todas es <code class="text-amber-400">password</code>.</p>
+            <dl class="flex flex-col gap-2 max-w-3xl">
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">administrador</dt>
+                    <dd class="break-all">admin@clinica.gob.ec</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">administrativo</dt>
+                    <dd class="break-all">ejemplo.administrativo@clinica.local</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">veterinario</dt>
+                    <dd class="break-all">ejemplo.veterinario@clinica.local</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">propietario</dt>
+                    <dd class="break-all">ejemplo.propietario.01@clinica.local</dd>
+                </div>
+            </dl>
+            <p class="font-sans text-gray-400 text-base max-w-3xl">La demo está en un plan gratuito: si nadie la usó en
+                los últimos minutos, la primera carga puede tardar cerca de un minuto. Los datos se reinician cada vez
+                que el servidor arranca; los correos no se envían, solo se registran.</p>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## contexto</h2>
+            <div class="font-sans text-gray-300 max-w-3xl flex flex-col gap-4">
+                <p>Programar una cirugía en una clínica veterinaria implica coordinar al mismo tiempo un veterinario,
+                    un quirófano, una mascota y su propietario. Llevado a mano, eso produce cruces de horario,
+                    cirugías sin seguimiento claro y ninguna forma de medir cómo se usan los recursos.</p>
+                <p>Este sistema centraliza toda la operación quirúrgica de la clínica: impide programar cirugías que
+                    se crucen, registra cada cambio de estado, avisa a los propietarios por correo y presenta
+                    indicadores operativos en un dashboard y en reportes exportables.</p>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## capturas</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <figure class="flex flex-col gap-2">
+                    <a href="../assets/proyectos/clinica-veterinaria/dashboard.png" target="_blank">
+                        <img src="../assets/proyectos/clinica-veterinaria/dashboard.png" width="1578" height="779"
+                            loading="lazy" alt="Dashboard con agenda del día e indicadores operativos"
+                            class="w-full h-auto rounded border border-gray-600 hover:border-gray-400 transition-colors">
+                    </a>
+                    <figcaption class="text-gray-400 text-base">dashboard con indicadores</figcaption>
+                </figure>
+                <figure class="flex flex-col gap-2">
+                    <a href="../assets/proyectos/clinica-veterinaria/calendario.png" target="_blank">
+                        <img src="../assets/proyectos/clinica-veterinaria/calendario.png" width="1583" height="779"
+                            loading="lazy" alt="Calendario mensual de cirugías programadas"
+                            class="w-full h-auto rounded border border-gray-600 hover:border-gray-400 transition-colors">
+                    </a>
+                    <figcaption class="text-gray-400 text-base">calendario de cirugías</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## qué hace</h2>
+            <ul class="font-sans text-gray-300 max-w-3xl flex flex-col gap-2 list-['>_'] marker:text-amber-400 ps-6">
+                <li>Programación y edición de cirugías con validación de cruces de veterinario, quirófano y horario.</li>
+                <li>Flujo de estados: programada, en progreso, completada, cancelada y no presentada.</li>
+                <li>Roles y permisos dinámicos (administrador, administrativo, veterinario y propietario).</li>
+                <li>Portal de propietarios para consultar sus mascotas y cirugías. Su cuenta se crea automáticamente
+                    al registrarlos.</li>
+                <li>Reportes diarios, semanales, mensuales o por rango, exportables a CSV y PDF.</li>
+                <li>Correos de confirmación y recordatorio, y un comando programado que marca como "no presentada" la
+                    cirugía que pasa el tiempo de tolerancia.</li>
+            </ul>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## decisiones técnicas</h2>
+            <dl class="flex flex-col gap-4 max-w-3xl">
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">transacción + bloqueo contra reservas dobles</dt>
+                    <dd class="font-sans text-gray-300">Al programar una cirugía, el controlador abre una transacción,
+                        bloquea el veterinario y el quirófano seleccionados y solo entonces comprueba los solapamientos.
+                        Así, dos personas que agendan al mismo tiempo no pueden pasar la validación a la vez. Al editar,
+                        se excluye la propia cirugía para que no se detecte como conflicto consigo misma.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">los conflictos rechazados también se guardan</dt>
+                    <dd class="font-sans text-gray-300">Una cirugía en conflicto no se guarda, pero el intento sí: se
+                        registra <em>después</em> de revertir la transacción, para que el registro no se pierda junto
+                        con la operación fallida. Ese dato alimenta el indicador de conflictos evitados.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">seguridad por capas</dt>
+                    <dd class="font-sans text-gray-300">Un middleware de roles restringe módulos completos, las
+                        policies controlan cada transición de estado de una cirugía y los Form Requests validan la
+                        entrada antes de llegar al controlador.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">métricas en un servicio, no en la vista</dt>
+                    <dd class="font-sans text-gray-300"><code>ReportService</code> calcula todos los indicadores
+                        (ocupación de quirófanos, inicio a tiempo, cirugías completadas, conflictos) para un rango de
+                        fechas. Las vistas solo presentan los datos, así las reglas de negocio no se duplican en Blade.
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## calidad</h2>
+            <ul class="font-sans text-gray-300 max-w-3xl flex flex-col gap-2 list-['>_'] marker:text-amber-400 ps-6">
+                <li>Pruebas automatizadas con Pest para autenticación, estados de cirugía y contenido de los correos,
+                    ejecutadas en GitHub Actions en cada push.</li>
+                <li>Entorno reproducible con Docker / Laravel Sail y Mailpit para probar los correos en local.</li>
+                <li>Seeder con un escenario operativo completo para revisar el sistema con datos plausibles.</li>
+                <li>Guía técnica con la arquitectura, el flujo de una cirugía y los pendientes técnicos conocidos.</li>
+            </ul>
+        </section>
+
+        <hr class="border-gray-600">
+
+        <nav class="flex flex-col sm:flex-row sm:justify-between gap-4">
+            <a href="elicrochet.html" class="text-gray-400 hover:text-white hover:underline">← 01_elicrochet-ecommerce</a>
+            <a href="tecnosoluciones.html" class="text-gray-400 hover:text-white hover:underline">03_tecnosoluciones →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p class="text-gray-400 text-center">© 2026 leandro_rubio<span
+                class="text-amber-400 motion-safe:animate-blink">_</span></p>
+    </footer>
+</body>
+
+</html>

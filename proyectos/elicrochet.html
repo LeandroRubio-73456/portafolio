@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth selection:text-gray-900 selection:bg-amber-400">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliCrochet e-commerce — Leandro Rubio</title>
+    <meta name="description"
+        content="Tienda en línea en Laravel para una microempresa de artesanías: pagos con PayPhone, pedidos personalizados, reseñas verificadas y panel de administración.">
+    <meta name="theme-color" content="#0D1117">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EliCrochet e-commerce — Leandro Rubio">
+    <meta property="og:description"
+        content="E-commerce en Laravel con pagos atómicos, pedidos personalizados y CI con 81% de cobertura.">
+    <meta property="og:image"
+        content="https://leandrorubio-73456.github.io/portafolio/assets/proyectos/elicrochet/home.png">
+    <meta property="og:url" content="https://leandrorubio-73456.github.io/portafolio/proyectos/elicrochet.html">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body class="bg-gray-900 font-mono text-white max-w-5xl text-lg mx-auto my-8 px-4">
+    <header class="flex flex-wrap justify-between gap-4 pb-10">
+        <a href="../index.html" class="font-bold">leandro<span class="text-amber-400">@</span>portfolio</a>
+        <nav class="flex gap-6 text-gray-400">
+            <a href="../index.html#proyectos" class="hover:text-white hover:underline">cd ../proyectos</a>
+        </nav>
+    </header>
+
+    <main class="flex flex-col gap-12 pb-10">
+        <section class="flex flex-col gap-6">
+            <span class="text-gray-400">$ cat proyectos/01_elicrochet-ecommerce/README.md</span>
+            <h1 class="text-3xl sm:text-5xl">EliCrochet <span class="text-amber-400">e-commerce</span></h1>
+            <p class="font-sans text-gray-400 max-w-3xl">Tienda en línea para EliCrochet, una microempresa ecuatoriana
+                de artesanías en crochet. Reúne catálogo, pagos en línea y pedidos personalizados en un solo lugar, en
+                vez de coordinarlos por chats de WhatsApp.</p>
+            <span class="text-gray-400"># Laravel 12 · PHP 8.4 · MySQL / SQLite · Bootstrap 5 · PayPhone · Pest ·
+                GitHub Actions · SonarCloud · Docker</span>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://elicrochet-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                    class="text-amber-400 border border-amber-400 rounded px-4 py-2 hover:text-amber-300 hover:border-amber-300 transition-colors">$
+                    ver_demo ↗</a>
+                <a href="https://github.com/LeandroRubio-73456/elicrochet-ecommerce" target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 border border-gray-600 rounded px-4 py-2 hover:text-white hover:border-white transition-colors">$
+                    ver_codigo ↗</a>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## pruébalo</h2>
+            <p class="font-sans text-gray-300 max-w-3xl">Entra a la <a href="https://elicrochet-demo.onrender.com" target="_blank" rel="noopener noreferrer"
+                    class="text-amber-400 hover:underline">demo en vivo ↗</a> con cualquiera de estas cuentas. La
+                contraseña de todas es <code class="text-amber-400">password</code>.</p>
+            <dl class="flex flex-col gap-2 max-w-3xl">
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">administrador</dt>
+                    <dd class="break-all">admin@elicrochet.com</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-1 sm:gap-4 p-3 border border-gray-600 rounded">
+                    <dt class="text-amber-400 sm:basis-40 shrink-0">cliente</dt>
+                    <dd class="break-all">test@example.com</dd>
+                </div>
+            </dl>
+            <p class="font-sans text-gray-400 text-base max-w-3xl">La demo está en un plan gratuito: si nadie la usó en
+                los últimos minutos, la primera carga puede tardar cerca de un minuto. Los datos se reinician cada vez
+                que el servidor arranca. Los pagos usan la pasarela simulada: no se cobra nada.</p>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## contexto</h2>
+            <div class="font-sans text-gray-300 max-w-3xl flex flex-col gap-4">
+                <p>EliCrochet vendía por WhatsApp: el catálogo, el inventario, los pedidos y los pagos se coordinaban a
+                    mano, conversación por conversación. Era difícil saber qué había en stock, seguir cada pedido y
+                    atender los encargos personalizados.</p>
+                <p>La plataforma digitaliza la tienda completa: catálogo con carrito y pago en línea, un flujo de
+                    cotización para pedidos a medida, reseñas de compradores verificados y un panel de administración
+                    con reportes financieros.</p>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## capturas</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <figure class="flex flex-col gap-2">
+                    <a href="../assets/proyectos/elicrochet/home.png" target="_blank">
+                        <img src="../assets/proyectos/elicrochet/home.png" width="1531" height="814" loading="lazy"
+                            alt="Página de inicio de la tienda con productos destacados"
+                            class="w-full h-auto rounded border border-gray-600 hover:border-gray-400 transition-colors">
+                    </a>
+                    <figcaption class="text-gray-400 text-base">tienda</figcaption>
+                </figure>
+                <figure class="flex flex-col gap-2">
+                    <a href="../assets/proyectos/elicrochet/admin.png" target="_blank">
+                        <img src="../assets/proyectos/elicrochet/admin.png" width="1511" height="806" loading="lazy"
+                            alt="Panel de administración con métricas de ventas"
+                            class="w-full h-auto rounded border border-gray-600 hover:border-gray-400 transition-colors">
+                    </a>
+                    <figcaption class="text-gray-400 text-base">panel de administración</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## qué hace</h2>
+            <ul class="font-sans text-gray-300 max-w-3xl flex flex-col gap-2 list-['>_'] marker:text-amber-400 ps-6">
+                <li>Catálogo por categorías, con especificaciones configurables para cada categoría.</li>
+                <li>Carrito y checkout con la pasarela de pago PayPhone.</li>
+                <li>Pedidos personalizados: el cliente pide una cotización con imágenes de referencia, el
+                    administrador la valora y el cliente paga desde su cuenta.</li>
+                <li>Reseñas verificadas: solo puede reseñar quien compró el producto y tiene la orden completada.</li>
+                <li>Inicio de sesión con cuenta propia o con Google.</li>
+                <li>Panel de administración con productos, categorías, usuarios, órdenes y reportes financieros
+                    exportables.</li>
+                <li>Correos transaccionales: confirmación de pago, cambios de estado y cotizaciones.</li>
+            </ul>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## decisiones técnicas</h2>
+            <dl class="flex flex-col gap-4 max-w-3xl">
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">un pago aprobado se procesa de forma atómica</dt>
+                    <dd class="font-sans text-gray-300">El cambio de estado, el vínculo con el pedido personalizado, el
+                        descuento de stock y el vaciado del carrito ocurren en una sola transacción. Si falta stock de
+                        algún producto, se revierte todo y la orden no queda a medias. Los productos que se quedan sin
+                        stock pasan a borrador automáticamente.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">pasarela simulada sin credenciales</dt>
+                    <dd class="font-sans text-gray-300">Si no hay credenciales de PayPhone, el sistema muestra una
+                        pantalla propia para aprobar o rechazar el pago, y el resto del flujo (orden, stock y correos)
+                        se ejecuta igual que con un pago real. Así se puede desarrollar y probar el checkout completo
+                        sin una cuenta comercial.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">lógica de negocio en servicios</dt>
+                    <dd class="font-sans text-gray-300">El carrito, el checkout, los pedidos personalizados y PayPhone
+                        viven en <code>app/Services</code>, y los controladores están separados por área (tienda,
+                        cliente y administración). Así los controladores se mantienen delgados y fáciles de probar.</dd>
+                </div>
+                <div class="p-4 border border-gray-600 rounded">
+                    <dt class="text-amber-400 mb-2">listo en un comando</dt>
+                    <dd class="font-sans text-gray-300">SQLite es el motor por defecto y <code>composer run setup</code>
+                        deja el proyecto funcionando con datos de demostración, sin instalar una base de datos.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <h2 class="text-gray-400">## calidad</h2>
+            <ul class="font-sans text-gray-300 max-w-3xl flex flex-col gap-2 list-['>_'] marker:text-amber-400 ps-6">
+                <li>En cada push, el CI en GitHub Actions ejecuta Laravel Pint, la suite de pruebas y el análisis de
+                    SonarCloud.</li>
+                <li>Exige una cobertura mínima del 60%; la actual ronda el <span class="text-amber-400">81%</span>.
+                </li>
+                <li>Entorno con Docker / Laravel Sail además de la instalación local con SQLite.</li>
+            </ul>
+        </section>
+
+        <hr class="border-gray-600">
+
+        <nav class="flex flex-col sm:flex-row sm:justify-between gap-4">
+            <a href="tecnosoluciones.html" class="text-gray-400 hover:text-white hover:underline">← 03_tecnosoluciones</a>
+            <a href="clinica-veterinaria.html" class="text-gray-400 hover:text-white hover:underline">02_sistema-veterinario →</a>
+        </nav>
+    </main>
+
+    <footer>
+        <p class="text-gray-400 text-center">© 2026 leandro_rubio<span
+                class="text-amber-400 motion-safe:animate-blink">_</span></p>
+    </footer>
+</body>
+
+</html>
